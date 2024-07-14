@@ -9,6 +9,7 @@ export default function HomePage() {
 
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const location = useLocation();
     console.log("HomePage.jsx > location ", location);  
@@ -22,13 +23,15 @@ export default function HomePage() {
                 setMovies(data);
             } catch (error) {
                 console.log(error);
-                <p>Error movies loading!</p>
+                setError(error);
             } finally {
                 setLoading(false);
             }
         }
         fetchMovies();
     }, [])
+
+    if (error) return <div>Error: {error.message}</div>;
 
     return (
         <div className={css.homePageDiv}>

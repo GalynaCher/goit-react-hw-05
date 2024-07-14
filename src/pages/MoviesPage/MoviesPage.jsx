@@ -12,6 +12,7 @@ export default function MoviesPage() {
     // console.log("MoviesPage.jsx > searchParams.toString(): ", searchParams.toString());
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
+     const [error, setError] = useState(false);
 
     const handleSearch = (newSearchCriteria) => {
         setSearchParams({ query: newSearchCriteria});
@@ -33,13 +34,15 @@ export default function MoviesPage() {
                 // console.log("MoviesPages > fetchMoviesByName", data);
             } catch (error) {
                 console.log(error);
-                 <p>Error movies loading!</p>
+                setError(error);
             } finally {
                 setLoading(false);
             }
         }
         fetchMoviesByName(searchParams.get('query'));
     }, [searchParams])
+
+    if (error) return <div>Error: {error.message}</div>;
 
     return (
         <div className={css.moviesPageDiv}>

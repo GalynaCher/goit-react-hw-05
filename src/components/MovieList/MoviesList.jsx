@@ -1,4 +1,3 @@
-
 import MovieItem from "../../components/MovieItem/MovieItem";
 
 export default function MoviesList({ movies }) {

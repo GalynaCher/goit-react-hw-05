@@ -32,7 +32,6 @@ export default function MovieCast() {
     // console.log("MovieCast > credits:", credits);
 
     if (error) return <div>Error: {error.message}</div>;
-    // if (!credits || credits.length === 0) return <div>Loading...</div>;
 
     return (
         <div>

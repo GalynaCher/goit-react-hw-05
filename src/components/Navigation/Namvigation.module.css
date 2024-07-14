@@ -1,0 +1,15 @@
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    color: orangered;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    font-size: large;
+}

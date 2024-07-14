@@ -1,0 +1,12 @@
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    color: orangered;
+}
+
+.container {
+    padding: 20px;
+}

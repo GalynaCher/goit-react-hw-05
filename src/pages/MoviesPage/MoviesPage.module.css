@@ -1,0 +1,22 @@
+.searchField {
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.moviesPageDiv {
+    padding: 0 10px;
+}
+
+.searchButton {
+    margin-left: 5px;
+    padding: 8px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(160 140 187);
+    /* transition: background-color 250ms linear; */
+    color: #ffff;
+    cursor: pointer;
+}
